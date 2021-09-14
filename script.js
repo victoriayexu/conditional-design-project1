@@ -19,6 +19,13 @@ if (btn) {
     btn.classList.toggle("dipped");
   };
 }
+var colorOne = Math.random()*255;
+var colorTwo = Math.random()*255;
+var colorThree = Math.random()*255;
+
+background(colorOne, colorTwo, colorThree);
+
+
 
 // This is a single line JS comment
 /*
