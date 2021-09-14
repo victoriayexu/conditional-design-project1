@@ -20,6 +20,34 @@ if (btn) {
   };
 }
 
+// function random_bg_color() {
+//     var x = Math.floor(Math.random() * 256);
+//     var y = Math.floor(Math.random() * 256);
+//     var z = Math.floor(Math.random() * 256);
+//     var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+//  // console.log(bgColor);
+  
+//     document.body.style.background = bgColor;
+//     }
+
+// random_bg_color();
+
+// function random_text_size(min, max){
+//   min = Math.ceil(1);
+//   max = Math.floor(20);
+//   var txt = Math.floor(Math.random() * (max - min) + min); 
+ 
+  
+// var txtSize= txt + "px";
+//   console.log(txtSize);
+//   document.getElementById('txt').style.fontSize = txtSize;
+// }
+
+// random_text_size();
+
+
+
+
 for (var x=0; x<100; x++) {
 var colorOne = Math.random()*255;
 var colorTwo = Math.random()*255;
