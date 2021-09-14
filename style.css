@@ -16,9 +16,9 @@ to this section's matching END comment to see page-specific styles.
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #141517;
-  --color-text-main: #000000;
-  --color-primary: #FFFF00;
+  --color-bg: #1f1e36;
+  --color-text-main: #FFFFFF;
+  --color-primary: #FFFFFF;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
@@ -141,11 +141,11 @@ body {
 }
 
 /* Very light scaling for our illustration */
-.illustration {
+/* .illustration {
   max-width: 100%;
   max-height: var(--image-max-width);
   margin-top: var(--image-margin);
-}
+} */
 
 /* Instructions */
 .instructions {
@@ -167,6 +167,10 @@ input {
 
 /* Subheading */
 h2 {
+  color: #ebecf0;
+}
+
+p {
   color: #ebecf0;
 }
 
