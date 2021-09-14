@@ -20,8 +20,8 @@ to this section's matching END comment to see page-specific styles.
   --color-text-main: #FFFFFF;
   --color-primary: #FFFFFF;
   --wrapper-height: 87vh;
-  --image-max-width: 300px;
-  --image-margin: 3rem;
+/*   --image-max-width: 300px; */
+/*   --image-margin: 3rem; */
   --font-family: "Helvetica";
   --font-family-header: "Helvetica";
 }
