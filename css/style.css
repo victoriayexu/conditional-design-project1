@@ -1,0 +1,274 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #1f1e36;
+  --color-text-main: #ffffff;
+  --color-primary: #ffffff;
+  --wrapper-height: 87vh;
+  /*   --image-max-width: 300px; */
+  /*   --image-margin: 3rem; */
+  --font-family: "Helvetica";
+  --font-family-header: "Helvetica";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+/* @font-face {
+  font-family: Helvetica, sans-serif;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+} */
+@font-face {
+  font-family: "Ogg TRIAL";
+  src: url("css/Ogg-Regular.ttf"), format("truetype");
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  /* padding: 0.5rem 1rem 1.5rem; */
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/*************************************************************************/
+
+body {
+  font-family: Helvetica;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #292929;
+  background-image: radial-gradient(
+      at 33% 13%,
+      hsla(360, 0%, 8%, 1) 0,
+      transparent 49%
+    ),
+    radial-gradient(at 15% 3%, hsla(242, 70%, 15%, 1) 0, transparent 47%),
+    radial-gradient(at 76% 8%, hsla(360, 0%, 0%, 1) 0, transparent 56%),
+    radial-gradient(at 19% 88%, hsla(360, 0%, 6%, 1) 0, transparent 41%),
+    radial-gradient(at 60% 75%, hsla(360, 0%, 8%, 1) 0, transparent 56%),
+    radial-gradient(at 9% 86%, hsla(360, 0%, 8%, 1) 0, transparent 58%),
+    radial-gradient(at 82% 84%, hsla(360, 0%, 0%, 1) 0, transparent 41%);
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  /* place-items: center; */
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+}
+.heading-banner {
+  display: flex;
+}
+/* Very light scaling for our illustration */
+.title {
+  color: #ebecf0;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 150px;
+  line-height: 105%;
+  margin: 0;
+  letter-spacing: -0.8rem;
+  text-align: left;
+}
+
+/* Very light scaling for our illustration */
+/* .illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+} */
+
+/* Instructions */
+h2 {
+  text-align: left;
+  font-size: 2em;
+  letter-spacing: -0.04rem;
+  margin-top: 1.1rem;
+  margin-left: 0.7rem;
+  color: #ebecf0;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.04em;
+}
+.intro {
+  max-width: 35%;
+  margin: 1rem;
+  letter-spacing: -0.01rem;
+  line-height: 1.2em;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.image-story {
+  max-width: 35%;
+  margin: 5rem;
+  letter-spacing: -0.01rem;
+}
+.ml-pic {
+  margin-bottom: 5rem;
+  position: relative;
+  left: 0;
+  transition: left 0.7s;
+}
+
+/* Button - Add it from the README instructions */
+/* button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+} */
+
+p {
+  color: #ebecf0;
+  font-size: 10pt;
+}
+.phrase {
+  /* font-family: "Ogg TRIAL"; */
+
+  text-transform: uppercase;
+  font-size: 15pt;
+  letter-spacing: 0.1pt;
+}
+.phrase-filler {
+  font-family: Helvetica;
+  text-transform: uppercase;
+  font-size: 15pt;
+  letter-spacing: 0.1pt;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 0.25pt #ebecf0;
+}
+.phrase-summary {
+  display: block;
+  align-items: center;
+  margin: 10rem;
+  max-width: 60%;
+  /* font-family: "Ogg TRIAL"; */
+  letter-spacing: 0.1pt;
+  text-transform: uppercase;
+  font-size: 10pt;
+  letter-spacing: 0.5pt;
+  line-height: 1.3rem;
+}
+.starting-phrase {
+  color: cornflowerblue;
+}
+
+.calaphon {
+  font-size: 7pt;
+  /* display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+/* .dipped {
+  transform: translateY(5px);
+} */
+
+/* @use postcss-cssnext;
+
+:root {
+  --linear-gradient: linear-gradient(
+    hsl(290, 50%, 8%), 
+    hsl(290, 50%, 8%, 0)
+  );
+  --ease-in-out-sine-gradient: ease-in-out-sine-gradient(
+    hsl(290, 50%, 8%),
+    transparent
+  );
+} */
+
+/* 
+ease-in-out-sine-gradient is processed into: 
+linear-gradient(
+  hsl(290, 50%, 8%) 0%,
+  hsla(290, 50%, 8%, 0.978) 9.5%,
+  hsla(290, 50%, 8%, 0.925) 17.7%,
+  hsla(290, 50%, 8%, 0.857) 24.7%,
+  hsla(290, 50%, 8%, 0.781) 31%,
+  hsla(290, 50%, 8%, 0.701) 36.8%,
+  hsla(290, 50%, 8%, 0.62) 42.3%,
+  hsla(290, 50%, 8%, 0.538) 47.6%,
+  hsla(290, 50%, 8%, 0.455) 52.9%,
+  hsla(290, 50%, 8%, 0.373) 58.2%,
+  hsla(290, 50%, 8%, 0.291) 63.7%,
+  hsla(290, 50%, 8%, 0.212) 69.5%,
+  hsla(290, 50%, 8%, 0.138) 75.8%,
+  hsla(290, 50%, 8%, 0.07) 82.9%,
+  hsla(290, 50%, 8%, 0.019) 91.2%,
+  hsla(290, 50%, 8%, 0) 100%
+)
+*/
