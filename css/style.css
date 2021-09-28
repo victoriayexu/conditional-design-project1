@@ -111,11 +111,11 @@ body {
       hsla(360, 0%, 8%, 1) 0,
       transparent 49%
     ),
-    radial-gradient(at 15% 3%, rgb(24, 22, 95) 0, transparent 47%),
+    radial-gradient(at 15% 3%, rgb(35, 35, 53) 0, transparent 47%),
     radial-gradient(at 76% 8%, hsla(360, 0%, 0%, 1) 0, transparent 56%),
     radial-gradient(at 19% 88%, hsla(360, 0%, 6%, 1) 0, transparent 41%),
-    radial-gradient(at 60% 75%, rgb(43, 29, 94) 0, transparent 56%),
-    radial-gradient(at 9% 86%, rgb(38, 8, 44) 0, transparent 58%),
+    radial-gradient(at 60% 75%, rgb(51, 49, 56) 0, transparent 56%),
+    radial-gradient(at 9% 86%, rgb(43, 26, 46) 0, transparent 58%),
     radial-gradient(at 82% 84%, hsla(360, 0%, 0%, 1) 0, transparent 41%);
 }
 
@@ -146,6 +146,8 @@ body {
   margin: 0;
   letter-spacing: -0.8rem;
   text-align: left;
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  transition: border-bottom 1s, color 0.5s, translate 0.4s;
 }
 .title-arrow {
   color: #ebecf0;
@@ -161,7 +163,7 @@ body {
 }
 .title-arrow:hover {
   text-shadow: 0px 0px 10px white;
-  transition: 250ms;
+  transition: ease 250ms;
 }
 
 h2 {
@@ -186,6 +188,16 @@ h2 {
   margin-top: 5rem;
   margin-bottom: 5rem;
   margin-left: 0.7rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition: border-bottom 1s, color 0.5s, translate 0.4s;
+}
+.page-link:hover {
+  border-bottom: 1.5px solid #ebecf0;
+  transition: border-bottom 1s, color 0.5s, translate 0.4s;
+}
+.title:hover {
+  border-bottom: 3.5px solid #ebecf0;
+  transition: border-bottom 1s, color 0.5s, translate 0.4s;
 }
 .long-intro {
   max-width: 35%;
@@ -212,7 +224,7 @@ h2 {
 
 .ml-pic img {
   opacity: 0;
-  transition: all 500ms;
+  transition: all ease 500ms;
 }
 
 .ml-pic:hover img {
@@ -233,11 +245,24 @@ p {
 .phrase {
   /* font-family: "Ogg TRIAL"; */
   text-transform: uppercase;
-  font-size: 15pt;
+  font-size: 14pt;
   letter-spacing: 0.1pt;
   position: absolute;
   bottom: 25%;
   z-index: 10;
+}
+.caption {
+  opacity: 0;
+  transition: ease-in 2000ms;
+  z-index: -20;
+  font-size: 8pt;
+  font-weight: bold;
+  color: #6e6f74;
+  padding-left: 10px;
+}
+
+.ml-pic:hover .caption {
+  opacity: 100;
 }
 .phrase-filler {
   font-family: Helvetica;
