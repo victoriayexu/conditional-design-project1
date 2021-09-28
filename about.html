@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
 
-    <title>Universe</title>
+    <title>about - UNIVERSE</title>
 
     <!-- Import the webpage's javascript file -->
     <script src="script.js" defer></script>
@@ -23,23 +23,36 @@
       <div class="content" role="main">
         <!-- This is the start of content for our page -->
         <div class="heading-banner">
-          <h1 class="title">UNIVERSE</h1>
-          <div id="navigation">
+          <a href="index.html"><h1 class="title">UNIVERSE</h1></a>
+          <btn id="navigationOpen" class="title-arrow">></btn>
+          <div id="navigation" class="hidden">
             <h2>and what AI thinks it is</h2>
+            <p class="intro-blurb">
+              Hover and click on the constellation of text phrases and follow
+              them down to find GPT-2's interpretation of the universe as a
+              concept, GAN's interpretation as images of spaces, and image
+              identifier's translation of them.
+            </p>
+            <br />
+            <a class="page-link" id="about-page" href="about.html">ABOUT</a>
           </div>
         </div>
 
         <!-- Instructions on using this project -->
-        <div class="intro">
-          <p class="intro-blurb">
+        <!-- <div class="vert-border"></div> -->
+        <div class="long-intro">
+          <p class="intro-blurb" id="long-intro-text">
             An experimental "uncreative daisy chain" in
             <strong>Runway ML</strong>'s available AI models.
             <br />
             <br />
-
-            Click on the text phrases and follow them down to find GPT-2's
-            interpretation of the universe as a concept, GAN's interpretation as
-            images of spaces, and image identifier's translation of them.
+            A starter phrase by my own creation was fed into a GPT-2 text
+            generator. I broke up the text into reasonably-sized clauses and fed
+            each snippet into AttnGAN, an environmental image generator, one at
+            a time. I then ran each generated image into a GAN image identifier,
+            trained to identify spaces. As a final experiment, I put the entire
+            text written by the GPT-2 generator into AttnGAN, creating the image
+            you see below.
           </p>
         </div>
 

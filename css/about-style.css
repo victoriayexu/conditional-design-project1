@@ -18,6 +18,24 @@ to this section's matching END comment to see page-specific styles.
   --font-family: "Helvetica";
   --font-family-header: "Helvetica";
 }
+#navigation {
+  opacity: 100;
+  transition: all 300ms;
+  max-width: 30%;
+}
+
+#navigation.hidden {
+  opacity: 0;
+}
+
+#navigationOpen {
+  transform: rotateZ(0deg) translate(0, 0);
+  transition: all 500ms;
+}
+
+#navigationOpen.rotate {
+  transform: rotateZ(90deg) translate(-40%, 20%);
+}
 
 /* Basic page style resets */
 * {
@@ -135,9 +153,10 @@ body {
   font-weight: 600;
   font-size: 50px;
   line-height: 105%;
-  margin: 1rem;
-  letter-spacing: -0.8rem;
+  padding: 1rem;
+  /* letter-spacing: -0.8rem; */
   text-align: left;
+  cursor: pointer;
 }
 
 /* Very light scaling for our illustration */
@@ -159,45 +178,45 @@ h2 {
   font-weight: normal;
   letter-spacing: -0.04em;
 }
-.intro {
+.page-link {
   max-width: 35%;
   margin: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.04;
   letter-spacing: -0.01rem;
   line-height: 1.2em;
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 5rem;
+  margin-left: 0.7rem;
 }
-
-.image-story {
-  max-width: 35%;
-  margin: 5rem;
+/* .vert-border {
+  border-radius: 3px;
+  border-color: #ebecf0;
+} */
+.long-intro {
+  max-width: 40%;
+  min-width: 35%;
+  margin: 1rem;
+  border-left: 4px solid #ebecf0;
   letter-spacing: -0.01rem;
+  line-height: 1.2em;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
-.ml-pic {
-  margin-bottom: 5rem;
-  position: relative;
-  left: 0;
-  transition: left 0.7s;
+#long-intro-text {
+  margin-left: 1.5rem;
 }
-
-/* Button - Add it from the README instructions */
-/* button,
-  input {
-    font-family: inherit;
-    font-size: 100%;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    transition: 500ms;
-  } */
-
 p {
   color: #ebecf0;
   font-size: 10pt;
 }
-
+.intro-blurb {
+  color: #ebecf0;
+  font-size: 10pt;
+  margin-top: 3.5rem;
+  margin-left: 0.7rem;
+}
 .phrase {
   /* font-family: "Ogg TRIAL"; */
   text-transform: uppercase;
@@ -229,6 +248,9 @@ p {
 }
 #starting-phrase {
   color: cornflowerblue;
+}
+.total-image {
+  transition: 500ms;
 }
 
 a {

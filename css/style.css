@@ -19,14 +19,23 @@ to this section's matching END comment to see page-specific styles.
   --font-family-header: "Helvetica";
 }
 
-.hidden {
-  opacity: 0;
+#navigation {
+  opacity: 100;
   transition: all 300ms;
+  max-width: 30%;
 }
 
-.rotate {
-  transform: rotateZ(90deg) translate(-40%, 20%);
+#navigation.hidden {
+  opacity: 0;
+}
+
+#navigationOpen {
+  transform: rotateZ(0deg) translate(0, 0);
   transition: all 500ms;
+}
+
+#navigationOpen.rotate {
+  transform: rotateZ(90deg) translate(-40%, 20%);
 }
 
 /* Basic page style resets */
@@ -146,19 +155,11 @@ body {
   font-size: 50px;
   line-height: 105%;
   padding: 1rem;
-  letter-spacing: -0.8rem;
+  /* letter-spacing: -0.8rem; */
   text-align: left;
   cursor: pointer;
 }
 
-/* Very light scaling for our illustration */
-/* .illustration {
-  max-width: 100%;
-  max-height: var(--image-max-width);
-  margin-top: var(--image-margin);
-} */
-
-/* Instructions */
 h2 {
   text-align: left;
   font-size: 2em;
@@ -178,10 +179,11 @@ h2 {
   letter-spacing: -0.04;
   letter-spacing: -0.01rem;
   line-height: 1.2em;
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 5rem;
+  margin-left: 0.7rem;
 }
-.intro {
+.long-intro {
   max-width: 35%;
   margin: 1rem;
   letter-spacing: -0.01rem;
@@ -200,24 +202,28 @@ h2 {
   position: relative;
   left: 0;
   transition: left 0.7s;
+  display: flex;
+  justify-content: center;
 }
 
-/* Button - Add it from the README instructions */
-/* button,
-input {
-  font-family: inherit;
-  font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: 500ms;
-} */
+.ml-pic img {
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.ml-pic:hover img {
+  opacity: 100;
+}
 
 p {
   color: #ebecf0;
   font-size: 10pt;
+}
+.intro-blurb {
+  color: #ebecf0;
+  font-size: 10pt;
+  margin-top: 3.5rem;
+  margin-left: 0.7rem;
 }
 
 .phrase {
@@ -225,6 +231,9 @@ p {
   text-transform: uppercase;
   font-size: 15pt;
   letter-spacing: 0.1pt;
+  position: absolute;
+  bottom: 25%;
+  z-index: 10;
 }
 .phrase-filler {
   font-family: Helvetica;
@@ -275,9 +284,9 @@ a {
 }
 
 /* Interactive image */
-.illustration:active {
+/* .illustration:active {
   transform: translateY(5px);
-}
+} */
 
 /* Button dip
 - Toggling this class on and off will move it down and up again
