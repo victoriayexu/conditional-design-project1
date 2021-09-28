@@ -159,6 +159,10 @@ body {
   text-align: left;
   cursor: pointer;
 }
+.title-arrow:hover {
+  text-shadow: 0px 0px 10px white;
+  transition: 250ms;
+}
 
 h2 {
   text-align: left;
@@ -282,7 +286,10 @@ a {
   margin-inline-start: 0px;
   margin-inline-end: 0px; */
 }
-
+#portfolio-link:hover {
+  text-shadow: 0px 0px 10px white;
+  transition: 250ms;
+}
 /* Interactive image */
 /* .illustration:active {
   transform: translateY(5px);
