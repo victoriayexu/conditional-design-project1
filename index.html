@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <link rel="icon" href="images/AttnGAN_full.jpeg" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,26 +13,6 @@
     />
 
     <title>Universe</title>
-
-    <!-- Meta tags for SEO and social sharing -->
-    <!-- <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-    <meta
-      name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Hello World!" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-    <meta
-      property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
-    />
-    <meta name="twitter:card" content="summary" /> -->
 
     <!-- Import the webpage's javascript file -->
     <script src="script.js" defer></script>
@@ -44,27 +24,31 @@
         <!-- This is the start of content for our page -->
         <div class="heading-banner">
           <h1 class="title">UNIVERSE</h1>
-          <h2>and what AI thinks it is</h2>
+          <btn id="navigationOpen" class="title-arrow">></btn>
+          <div id="navigation" class="hidden">
+            <h2>and what AI thinks it is</h2>
+            <p class="intro-blurb">
+              hover and click on the constellation of text phrases and follow
+              them down to find GPT-2's interpretation of the universe as a
+              concept, GAN's interpretation as images of spaces, and image
+              identifier's translation of them.
+            </p>
+            <br />
+            <a class="page-link" id="about-page" href="about.html">ABOUT</a>
+          </div>
         </div>
-
-        <!--         <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        /> -->
         <!-- Instructions on using this project -->
-        <div class="intro">
+        <!-- <div class="intro">
           <p class="intro-blurb">
             An investigation in <strong>Runway ML</strong>'s GAN and GTP-2
             models.
             <br />
             <br />
-            Click on the stars and follow them down to find GPT-2's
+            Click on the text phrases and follow them down to find GPT-2's
             interpretation of the universe as a concept, GAN's interpretation as
             images of spaces, and image identifier's translation of them.
           </p>
-        </div>
+        </div> -->
         <!-- IMAGES AND STUFF -->
         <div class="image-story">
           <div class="ml-pic">
@@ -203,7 +187,7 @@
         </div>
 
         <!-- final summary -->
-        <div class="phrase-summary">
+        <!-- <div class="phrase-summary">
           <p class="phrase-final">
             <span id="starting-phrase"
               >Beyond the observable universe and into the void</span
@@ -223,25 +207,15 @@
             sphere of direct and invisible force. That, in the visible world, is
             the true force of nature.
           </p>
-        </div>
+        </div> -->
 
         <!-- <img class="pic" draggable="true" > i should try draggables? -->
       </div>
 
       <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
+
       <footer class="footer">
-        <div class="links"></div>
-        <!-- <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a> -->
+        <div class="credit"></div>
         <p class="calaphon">
           Victoria Xu
           <br />

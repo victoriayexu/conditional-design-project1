@@ -68,3 +68,10 @@ setInterval(() => {
     elem.style.left = `${newX}px`;
   });
 }, 5000);
+
+const revealNav = () => {
+  document.getElementById("navigation").classList.toggle("hidden");
+  document.getElementById("navigationOpen").classList.toggle("rotate");
+};
+
+document.getElementById("navigationOpen").onclick = revealNav;
